@@ -9,7 +9,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.barani.moviereviewsystem.helper.ImageFormatHelper;
 import com.barani.moviereviewsystem.model.Movie;
 import com.barani.moviereviewsystem.model.MovieDto;
 import com.barani.moviereviewsystem.model.Review;
@@ -30,8 +29,8 @@ class MovieMapper {
         dto.setMovieId(movie.getMovieId());
         dto.setTitle(movie.getTitle());
         dto.setDescription(movie.getDescription());
-        dto.setPoster(ImageFormatHelper.decompressBytes(movie.getPicByte()));
-        if(!movie.getReviews().isEmpty())
+        dto.setPoster(movie.getPicByte());
+        if(movie.getReviews() != null && movie.getReviews().size() > 0)
         {
         	List<ReviewDto> reviewDto = new LinkedList<ReviewDto>();
         	for(Review review : movie.getReviews())

@@ -52,7 +52,7 @@ public class ImageFormatHelper {
 			} catch (IOException ioe) {
 
 			} catch (DataFormatException e) {
-
+				
 			}
 			return outputStream.toByteArray();
 		}

@@ -42,11 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {
-
-	    // List of all encoders we support. Old ones still need to be here for rolling updates
-	    Map<String, PasswordEncoder> encoders = new HashMap<>();
-	    encoders.put("bcrypt", new BCryptPasswordEncoder());
-	    return new DelegatingPasswordEncoder("bcrypt", encoders);
+			return new BCryptPasswordEncoder();
 	}
 	
 	@Override

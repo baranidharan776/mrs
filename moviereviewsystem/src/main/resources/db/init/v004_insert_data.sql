@@ -1,8 +1,8 @@
 ----- Insert User data -----
 
-INSERT INTO USER(USERNAME, PASSWORD, USER_TYPE) VALUES ('admin', 'admin','admin');
+INSERT INTO USER(USERNAME, PASSWORD, USER_TYPE) VALUES ('admin', '$2a$12$T2ZX1vbnQI/rJ7MTnblF3.IjvZwejRmLZkVKR/hjUk6jcbKa6pK6W','admin');
 
-INSERT INTO USER(USERNAME, PASSWORD, USER_TYPE) VALUES ('user', 'user','user');
+INSERT INTO USER(USERNAME, PASSWORD, USER_TYPE) VALUES ('user', '$2a$12$XQmEKpi.Z3ErguJm3kF40.3oZMYkSTDRbXhSe29oJ/3Nzn2JMiBJS','user');
 
 ------ Insert Roles -----
 
